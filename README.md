@@ -1,5 +1,5 @@
 # Xihara
-A playfull way to teach machine learning skills by giving the ability to Ova bots to recognize colors with its camereye 👁️
+A playfull way to teach machine learning by giving the ability to Ova bots to recognize colors with its camereye 👁️
 
 [![A playfull challenge where students compete with others by developping the best machine learning algorithms](xihara-challenge.png)](http://www.youtube.com/watch?v=3O7sKRbIdt4 "Video Title")
 
@@ -98,7 +98,7 @@ python main.py
 
 The following folders contains the solution of the challenge.
 Ideally, students will have to rewrite it from scratch, coached by their teachers to make them use the best practices. 
-And if they are stucked, they can keep the interfaces and implements the classes behind, and theirs methods.
+And if they are stucked, they can keep the interfaces and implement the classes behind, and theirs methods.
 
 ### 📂 collector 
 The python scripts used to capture and store pictures automatically for training classifiers. 
@@ -108,6 +108,8 @@ The python sources implementing different algorithms to assessing the picture to
 Ideally, students should produce the `/train/report.png` figures using matplotib, in order to validate their characterizering metrics, before going any further implementing classification algorithms.
 
 ![Matplotib figures](/train/report.png "")
+
+For instance, in the picture below, we easily see that using mean and standard deviation characterizing allow us to segregate by hand the colored dots representing each labeled data. So any classifier should performed well considering this.
 
 ### 📂 classifier
 The python scripts implementing different classifiers with common methods
