@@ -10,10 +10,9 @@ The server controls the colors and make them change more or less randomly.
 In order to win, each robot must recognize the border color of the circle and change the RGB color of its LED accordingly.
 The server keeps in the inner Xihara circle the possibles color to guess, so the robot can rely on at any time.  
 
-Here is an example of 4 images captured by one Ova at different time, where the server is set to display 4 colors to guess : red, green, blue, black.
+Here is an example of 4 images captured by one Ova at different time, where the server is set to display 3 colors to guess : red, green, blue.
 
-![Red color to guess among 4 others](/train/4_0_240_240_0.jpeg "🔴Red to guess") ![Green color to guess among 4 others](/train/4_1_240_240_22.jpeg "🟢Green to guess") 
-![Blue color to guess among 4 others](/train/4_2_240_240_43.jpeg "🔵Blue to guess") ![Black color to guess among 4 others](/train/4_3_240_240_64.jpeg "⚫Black to guess")
+![Red color to guess among 4 others](/train/4_0_240_240_0.jpeg "🔴Red to guess") ![Green color to guess among 4 others](/train/4_1_240_240_22.jpeg "🟢Green to guess") ![Blue color to guess among 4 others](/train/4_2_240_240_43.jpeg "🔵Blue to guess")
 
 The next level of Xihara challenge, called `SymphonX`, consists of associating colors to musical tones thanks to a dictionary sent by the server, where each color to guess (the key) comes with a frequency (the value) to play using the robot buzzer. Mastering LED RGB and buzzer tone frequency will give you more points for each color to guess. Finally, when a student manage to guess the melody played by the robots, the game ends, and the winner will be the one with most points gained 🏆 
 
