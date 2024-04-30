@@ -1,6 +1,6 @@
 
-#*.jpeg
-#*.png
+*.jpeg
+*.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
