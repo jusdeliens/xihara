@@ -1,0 +1,3 @@
+[submodule "pyrobotx"]
+	path = pyrobotx
+	url = https://github.com/jusdeliens/pyrobotx.git

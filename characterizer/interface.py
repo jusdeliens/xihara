@@ -1,0 +1,13 @@
+class IPixelCharacterizer:
+    def labels(self) -> list[str]:
+       "Describe each label of the characterization values returned"
+       ...
+    def characterize(self, x : int, y : int ) -> list[float]:
+       ...
+
+class IImageCharacterizer :
+    def labels(self) -> list[str]:
+       "Describe each label of the characterization values returned"
+       ...
+    def characterize(self) -> list[float]:
+       ...
