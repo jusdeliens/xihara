@@ -30,6 +30,10 @@ It requires the following materials :
 - A MQTT broker as a hub. It can be the official online Jusdeliens's broker or your own local broker according to your wishes.
 - 1 wifi access point available for every robots and computers 
 
+Ideally, it can allow
+- at most 8 students with 8 robots, but make sure to use a screen as big (a 55 inch screen was used during the last event show in the first picture below)
+- at least 1 host, with good programming skills and a wide IA understanding
+
 Whether your are a student or a teacher, feel free to [contact us](https://jusdeliens.com/contact) to setup your own gears to perform your Xihara challenge in your organization, we will be glad to show you how.
 
 ## 🧠 Skills
@@ -81,14 +85,15 @@ You can also repeat the steps above in another loop to improve your training, by
 
 ### 4. 📊 Characterize your data with metrics 
 
-These metrics will be given to your classifier as input, and you kown the GIGO saying : *"Garbage In, Garbage Out"* !
+These metrics will be given to your classifier as input, and you know the GIGO saying : *"Garbage In, Garbage Out"* !
 So make sure to use matplotlib to generate report that demonstrates the validity of your metrics by producing `/train/report.png` figures using matplotib, before going any further implementing classification algorithms.
 
 ![Matplotib figures](/train/report.png "")
 
 For instance, in the picture below 👆, we easily see that using mean and standard deviation characterizing allow us to segregate "by hand" the colored dots representing each labelled data. So any classifier should performed well considering this.
 
-### 5. 🍜 Feed your classifier to train them
+### 5. 🍜 Feed your classifiers for training
+
 Assess their performances using sklearn confusion matrix and classification reports, and add it to your README like below.
 ```bash
 Confusion matrix:
@@ -163,8 +168,8 @@ python main.py
 
 ## 📂 Folders
 
-The following folders contains the solution of the challenge.
-Ideally, students will have to rewrite it from scratch, guided by their teacher host to make them use the best practices. 
+The following folders contain the solution of the challenge.
+Ideally, students will have to rewrite it from scratch, guided by their host to make them use the best practices. 
 And if they need help, they can keep the interfaces and implement the classes behind, and theirs methods.
 
 ### 📂 collector 
