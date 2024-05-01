@@ -45,7 +45,7 @@ Solving this problem will allow you to master
 In this order, you will have to 
 ### 1. 💡 Brainstorm how to make all this work
 
-Think in term of responsabilities (S in SOLID) or in domain (Domain Driven Design) to foresee the classes and objects of your design, and the todo list corresponding.
+Think in term of responsabilities (SOLID, mostly S,O,I) or in domain (Domain Driven Design) to foresee the classes and objects of your design, and the todo list corresponding.
 
 You may produce UML class diagram and sequence diagram to synthesize your design, using 
 - [plantUML](https://plantuml.com/fr/) to be installed as extension in VSCode
@@ -55,13 +55,28 @@ And export the diagrams (as `.svg` for plantUML, or base64 string for mermaid) a
 
 [![](https://mermaid.ink/img/pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R?type=png)](https://mermaid.live/edit#pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R)
 
+Don't forget the 
+- *Single responsability* : each class of your design must have only one reason to change. Name it with an action verbe to make sure of it.
+- *Interface segregation* : a user should not depend of things he does NOT need ! If I want to characterize any picture using your classes, it will be great to have the minimal dependencies all behind interfaces, thus, at worse, I will only have to redevelop 1 class that inherits from your interface.
+- *Open to extension, close to modificaiton* : For instance make sure your characterizers can work with any data, coming from an Ova or anything else, to don't have to re-develop all your code each time you want to use with another camera. 
+
+
 ### 2. 🤖 Connect to your robot 
 
 See in the pyrobotx `IRobot` interface and `OvaMqttClient` class how to use the API methods to connect your program to your robot through the mqtt broker and enable its camera to collect some pictures.
 
-### 3. 🚜 Automate the collect
+### 3. 🚜 Automate the harvest
 
-In order to auto perform the labeling of your data to be able to work with any color number (from 2 to 6)
+In order to auto collect and perform the labeling your data to be able to work with any color number (from 2 to 6).
+
+During the "harvest", the Xihara server is set to change color at the same period (every second) in the same sequence according to the number of colors.
+The steps to consider are the following :
+```
+For each nColorToGuess, from 2 to 6
+    For each color from 0 to nColorToGuess-1
+        take many capture and label your picture in the train folder according to nColorToGuess and the actual color name in progress
+```
+You can also repeat the steps above in another loop to improve your training, by adding new "stressess" and noises each iteration (like changing robot position, change luminosity in the room) .
 
 ### 4. 📊 Characterize your data with metrics 
 
