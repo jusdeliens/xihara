@@ -50,7 +50,7 @@ class SvmClassifier(IClassifier):
         # Faire un nuage de point pour chaque combinaison de 2 variables explicatives différentes
         nVarsExplicatives = self.__trainData.shape[1]-1
         fig, axs = plt.subplots(nrows=nVarsExplicatives, ncols=nVarsExplicatives) # Diviser fenetre en grille de 2 colonnes 1 ligne
-        fig.suptitle("Train characterization with "+self.__nClasses+" classes", fontsize=16)
+        fig.suptitle(f"Train characterization with {self.__nClasses} classes", fontsize=16)
         for axCol in range(nVarsExplicatives):
             for axRow in range(nVarsExplicatives):
                 ax = axs[axRow][axCol]

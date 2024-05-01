@@ -3,3 +3,6 @@ requests
 python-dotenv
 pytz
 pillow
+pandas
+scikit-learn
+matplotlib

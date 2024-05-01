@@ -1,16 +1,16 @@
 # Xihara
-A playfull way to teach machine learning by giving the ability to Ova bots to recognize colors with its camereye 👁️
+A playfull way to teach machine learning by giving the ability to Ova bots to recognize colors with their "camereye" 👁️
 
 [![A playfull challenge where students compete with others by developping the best machine learning algorithms](xihara-challenge.png)](http://www.youtube.com/watch?v=3O7sKRbIdt4 "Video Title")
 
 ## 🎯 Claims
 
 In this multirobot challenge, each robot is placed above a screen, its camera pointing toward a colored circle.
-The server controls the colors and make them change more or less randomly. 
+The web application displayed on the scree, listen to a server that controls the colors and make them change more or less randomly. 
 In order to win, each robot must recognize the border color of the circle and change the RGB color of its LED accordingly.
-The server keeps in the inner Xihara circle the possibles color to guess, so the robot can rely on at any time.  
+The app keeps in the inner Xihara circle the possibles color to guess, so the robot can rely on at any time.  
 
-Here is an example of 4 images captured by one Ova at different time, where the server is set to display 3 colors to guess : red, green, blue.
+Here is an example of 4 images captured by one Ova at different time, where the server is set to display 3 colors to guess : 🔴red, 🟢green, 🔵blue.
 
 ![Red color to guess among 4 others](/train/4_0_240_240_0.jpeg "🔴Red to guess") ![Green color to guess among 4 others](/train/4_1_240_240_22.jpeg "🟢Green to guess") ![Blue color to guess among 4 others](/train/4_2_240_240_43.jpeg "🔵Blue to guess")
 
@@ -38,18 +38,69 @@ Solving this problem will allow you to master
 - a practical approach of image processing metrics and basics statistics such as gradient, mean, standard deviation 
 - SVM, KNN with a good understanding of how they work, and how to assess and improve their performances
 - best programming practices such as Object Oriented Programming, SOLID concepts, Test and Comment Driven Development
+- conception skills using UML, class diagram and sequence diagram to properly add to your README in markdown
 
 ## 👣 Steps
 
 In this order, you will have to 
-1. Brainstorm how to make all this work, think in term of responsabilities (S in SOLID) or in domain (Domain Driven Design) to foresee the classes and objects of your design, and the todo list corresponding 
-2. Connect to your robot through the broker and enable its camera to collect some pictures 
-3. Automate the collect and the labeling of your data to be able to work with any color number (from 2 to 6)
-4. Characterize and feed your classifiers
-5. Train and assess your classifier performances
-6. Predict each new color and control the LED in loop
-7. Play the buzzer tone for each color in loop
-8. and finally ... recognize the melody !
+### 1. 💡 Brainstorm how to make all this work
+
+Think in term of responsabilities (S in SOLID) or in domain (Domain Driven Design) to foresee the classes and objects of your design, and the todo list corresponding.
+
+You may produce UML class diagram and sequence diagram to synthesize your design, using 
+- [plantUML](https://plantuml.com/fr/) to be installed as extension in VSCode
+- or [mermaid](https://mermaid.live/edit#pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R) requiring only a web browser and an Internet connection
+
+And export the diagrams (as `.svg` for plantUML, or base64 string for mermaid) and embeds in your README like this 👇
+
+[![](https://mermaid.ink/img/pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R?type=png)](https://mermaid.live/edit#pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R)
+
+### 2. 🤖 Connect to your robot 
+
+See in the pyrobotx `IRobot` interface and `OvaMqttClient` class how to use the API methods to connect your program to your robot through the mqtt broker and enable its camera to collect some pictures.
+
+### 3. 🚜 Automate the collect
+
+In order to auto perform the labeling of your data to be able to work with any color number (from 2 to 6)
+
+### 4. 📊 Characterize your data with metrics 
+
+These metrics will be given to your classifier as input.
+Use matplotlib to generate report that demonstrates the validity of your metrics by producing `/train/report.png` figures using matplotib, before going any further implementing classification algorithms.
+
+![Matplotib figures](/train/report.png "")
+
+For instance, in the picture below 👆, we easily see that using mean and standard deviation characterizing allow us to segregate by hand the colored dots representing each labeled data. So any classifier should performed well considering this.
+
+### 5. 🍜 Feed your classifier to train them
+Assess their performances using sklearn confusion matrix and classification reports, and add it to your README like below.
+```bash
+Confusion matrix:
+[[3 0 0 0]
+ [0 4 0 0]
+ [0 0 4 0]
+ [0 0 0 4]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00         3
+           1       1.00      1.00      1.00         4
+           2       1.00      1.00      1.00         4
+           3       1.00      1.00      1.00         4
+
+    accuracy                           1.00        15
+   macro avg       1.00      1.00      1.00        15
+weighted avg       1.00      1.00      1.00        15
+```
+
+For instance, we see above 👆 a perfect confusion matrix and performances report with no errors, but of course we only use 3+4+4+4 pictures for 4 classes to recognize. You should have a lot more pictures and metrics to feed your classifier and leading to more classification errors to be interpreted. 
+
+### 6. 🚀 Deploy for production
+
+In your main loop, use your trained model to
+- Predict each new color and control the LED in loop
+- Play the buzzer tone for each color in loop
+
+And finally ... recognize the melody like a blind test !
 
 ## ⚙️ Setup
 
@@ -105,11 +156,6 @@ The python scripts used to capture and store pictures automatically for training
 
 ### 📂 characterizer
 The python sources implementing different algorithms to assessing the picture to classify.
-Ideally, students should produce the `/train/report.png` figures using matplotib, in order to validate their characterizering metrics, before going any further implementing classification algorithms.
-
-![Matplotib figures](/train/report.png "")
-
-For instance, in the picture below, we easily see that using mean and standard deviation characterizing allow us to segregate by hand the colored dots representing each labeled data. So any classifier should performed well considering this.
 
 ### 📂 classifier
 The python scripts implementing different classifiers with common methods
