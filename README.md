@@ -6,15 +6,16 @@ A playfull way to teach machine learning by giving the ability to Ova bots to re
 ## 🎯 Claims
 
 In this multirobot challenge, each robot is placed above a screen, its camera pointing toward a colored circle.
-The web application displayed on the scree, listen to a server that controls the colors and make them change more or less randomly. 
+The web application opened in fullscreen, listen to a server that controls the colors and make them change more or less randomly (it appears to be random, but you will discover later, it is not 🧐). 
+
 In order to win, each robot must recognize the border color of the circle and change the RGB color of its LED accordingly.
-The app keeps in the inner Xihara circle the possibles color to guess, so the robot can rely on at any time.  
+The app keeps in the inner Xihara circle the possibles color to guess, so the robot can rely on it at any time.  
 
 Here is an example of 4 images captured by one Ova at different time, where the server is set to display 3 colors to guess : 🔴red, 🟢green, 🔵blue.
 
 ![Red color to guess among 4 others](/train/4_0_240_240_0.jpeg "🔴Red to guess") ![Green color to guess among 4 others](/train/4_1_240_240_22.jpeg "🟢Green to guess") ![Blue color to guess among 4 others](/train/4_2_240_240_43.jpeg "🔵Blue to guess")
 
-The next level of Xihara challenge, called `SymphonX`, consists of associating colors to musical tones thanks to a dictionary sent by the server, where each color to guess (the key) comes with a frequency (the value) to play using the robot buzzer. Mastering LED RGB and buzzer tone frequency will give you more points for each color to guess. Finally, when a student manage to guess the melody played by the robots, the game ends, and the winner will be the one with most points gained 🏆 
+The next level of Xihara challenge, called `SymphonX`, consists of associating colors to musical tones thanks to a dictionary sent by the server, where each color to guess (the key) comes with a frequency (the value) to play using the robot buzzer. Mastering LED RGB and buzzer tone frequency at the same time will give you more points for each color to guess. Finally, when a student manage to guess the melody played by the robots, the host stops the server and ends the game, and the winner will be the one with most points gained 🏆 
 
 
 ## 🎮 How to play ?
@@ -29,7 +30,7 @@ It requires the following materials :
 - A MQTT broker as a hub. It can be the official online Jusdeliens's broker or your own local broker according to your wishes.
 - 1 wifi access point available for every robots and computers 
 
-Whether your are a student or a teacher, feel free to [contact us](https://jusdeliens.com/contact) to setup your own gear to perform your Xihara challenge in your organization, we will be glad to show you how.
+Whether your are a student or a teacher, feel free to [contact us](https://jusdeliens.com/contact) to setup your own gears to perform your Xihara challenge in your organization, we will be glad to show you how.
 
 ## 🧠 Skills
 
@@ -56,8 +57,8 @@ And export the diagrams (as `.svg` for plantUML, or base64 string for mermaid) a
 [![](https://mermaid.ink/img/pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R?type=png)](https://mermaid.live/edit#pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R)
 
 Don't forget the 
-- *Single responsability* : each class of your design must have only one reason to change. Name it with an action verbe to make sure of it.
-- *Interface segregation* : a user should not depend of things he does NOT need ! If I want to characterize any picture using your classes, it will be great to have the minimal dependencies all behind interfaces, thus, at worse, I will only have to redevelop 1 class that inherits from your interface.
+- *Single responsability* : each class of your design must have only one reason to change. Name it with an action verb to make sure of it.
+- *Interface segregation* : a user should not depend on things he does NOT need ! If I want to characterize any picture using your classes, it will be great to have the minimal dependencies all behind interfaces, thus, at worse, I will only have to redevelop 1 class that inherits from your interface.
 - *Open to extension, close to modificaiton* : For instance make sure your characterizers can work with any data, coming from an Ova or anything else, to don't have to re-develop all your code each time you want to use with another camera. 
 
 
@@ -67,25 +68,25 @@ See in the pyrobotx `IRobot` interface and `OvaMqttClient` class how to use the 
 
 ### 3. 🚜 Automate the harvest
 
-In order to auto collect and perform the labeling your data to be able to work with any color number (from 2 to 6).
+In order to auto collect and perform the labelling your data to be able to work with any color number (from 2 to 6).
 
-During the "harvest", the Xihara server is set to change color at the same period (every second) in the same sequence according to the number of colors.
+During the "harvest", the Xihara server is set to change color at the same period (every second) in the same sequence according to the number of colors to guess.
 The steps to consider are the following :
 ```
 For each nColorToGuess, from 2 to 6
     For each color from 0 to nColorToGuess-1
         take many capture and label your picture in the train folder according to nColorToGuess and the actual color name in progress
 ```
-You can also repeat the steps above in another loop to improve your training, by adding new "stressess" and noises each iteration (like changing robot position, change luminosity in the room) .
+You can also repeat the steps above in another loop to improve your training, by adding new "stresses" and noises each iteration (like changing robot position, change luminosity in the room) .
 
 ### 4. 📊 Characterize your data with metrics 
 
-These metrics will be given to your classifier as input.
-Use matplotlib to generate report that demonstrates the validity of your metrics by producing `/train/report.png` figures using matplotib, before going any further implementing classification algorithms.
+These metrics will be given to your classifier as input, and you kown the GIGO saying : *"Garbage In, Garbage Out"* !
+So make sure to use matplotlib to generate report that demonstrates the validity of your metrics by producing `/train/report.png` figures using matplotib, before going any further implementing classification algorithms.
 
 ![Matplotib figures](/train/report.png "")
 
-For instance, in the picture below 👆, we easily see that using mean and standard deviation characterizing allow us to segregate by hand the colored dots representing each labeled data. So any classifier should performed well considering this.
+For instance, in the picture below 👆, we easily see that using mean and standard deviation characterizing allow us to segregate "by hand" the colored dots representing each labelled data. So any classifier should performed well considering this.
 
 ### 5. 🍜 Feed your classifier to train them
 Assess their performances using sklearn confusion matrix and classification reports, and add it to your README like below.
@@ -107,7 +108,7 @@ Confusion matrix:
 weighted avg       1.00      1.00      1.00        15
 ```
 
-For instance, we see above 👆 a perfect confusion matrix and performances report with no errors, but of course we only use 3+4+4+4 pictures for 4 classes to recognize. You should have a lot more pictures and metrics to feed your classifier and leading to more classification errors to be interpreted. 
+For instance, we see above 👆 a perfect confusion matrix and performances report with no error, but of course we only use 3+4+4+4 pictures for 4 classes to recognize. You should have a lot more pictures and metrics to feed your classifier and leading to more classification errors to be interpreted. 
 
 ### 6. 🚀 Deploy for production
 
@@ -163,8 +164,8 @@ python main.py
 ## 📂 Folders
 
 The following folders contains the solution of the challenge.
-Ideally, students will have to rewrite it from scratch, coached by their teachers to make them use the best practices. 
-And if they are stucked, they can keep the interfaces and implement the classes behind, and theirs methods.
+Ideally, students will have to rewrite it from scratch, guided by their teacher host to make them use the best practices. 
+And if they need help, they can keep the interfaces and implement the classes behind, and theirs methods.
 
 ### 📂 collector 
 The python scripts used to capture and store pictures automatically for training classifiers. 
