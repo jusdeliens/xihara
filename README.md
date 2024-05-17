@@ -54,11 +54,11 @@ Think in term of responsabilities (SOLID, mostly S,O,I) or in domain (Domain Dri
 
 You may produce UML class diagram and sequence diagram to synthesize your design, using 
 - [plantUML](https://plantuml.com/fr/) to be installed as extension in VSCode
-- or [mermaid](https://mermaid.live/edit#pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R) requiring only a web browser and an Internet connection
+- or [mermaid](https://mermaid.live/edit#pako:eNqdUsFOwzAM_RUrXIrofqDiNi47IKZNnOgOXuptFmlSUnfaGPt30nSDFhUO5NBU9vN79otPSruCVKa0wbp-YNx6LHML4cwWbu0E7j8mE3ja49QwWXl8E8ltB4glMJvzgcx0hx61kOd38qcuD3BnuJaXpXi22xUYXJOpk9thdmMcygp0jyBhK3BIob2OF_h5oDkrcUv_0Zz8qjmqM3XGkBbn4Ys_KHiqSb45Q0R3uKRAwXGi9uIN9xsVj2yTrlNoKwPrHGWXQuwPhGpZVoZlTl4H738Y15tkFbE9Zz1VzsuV2zWR96_6ylPBYYC-PYfRSbqt6NvRVKF56vtx4-xzDBZJfCng9jsExMSCNPF-FDZQHezfVfysUlWSL5GLsMAxmCvZUUm5ysJvgf41V7ltcdiIWx6tVpn4hlLV9XzZd5Vt0NR0_gQHNf3p) requiring only a web browser and an Internet connection
 
 And export the diagrams (as `.svg` for plantUML, or base64 string for mermaid) and embeds in your README like this 👇
 
-[![](https://mermaid.ink/img/pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R?type=png)](https://mermaid.live/edit#pako:eNptkctOAzEMRX8l8oqKzg-M2CBKJRZddYciIU9iTa3JA_JQVUr_ncyUCaUlK_s417q2j6C8JmhBGYxxxdgHtNKJ8h4dWzTi4atpxCqr4ZauOe5u6St1Af_gVtyzSwJ7usbbFNj1oienKVwWR0ncoC3h3eKqYDHRDCfbk73jGYjatCMcnrzxoRbinu0sLOlHRjXM-emy3zhY7deM3iN_0otbE6WKFbpnTP_qpxX8Guq8N4Lj256NrjBkV7WwBEvBIutyiUknIe3IkoS2hBrDIEG68R_m5LcHp6BNIdMS8rsu6_g53BmevgFsko8R)
+[![](https://mermaid.ink/img/pako:eNqVVNuO2jAQ_RXLfUlV-AHUlwrUalV1i0CVKjU8DM4kjNaxqTOhbCn_XidmIQGnbPOQy8w5czkz8UEqm6GcSKWhqmYEhYMyNcJfD3Pao55uwIFidPQbnXj_ZzwWnxxkt747pI-k_fd_0xbFekZ5Psh7KKHAeDpsfT7AIHlqtUbF9sSZVrsZMJytcdSHmm3Ieo1rFKScXkpY7sqLaQDz2Zi7mEesnX0dDPQj8i_rnm7QC7u2HIBfdzDVhIa__GQO7p7pjGo-vlOjW6zfexwPt26ByhYmSB5o7Z7F5n0IfiHeaar4x5IdmWIlNKxRV8nbvjfXFnglVCdAQobFfiSax_MJfuzlvN2VV-YcD-aM5rkszDm-z-CwQr7E9BYVcEnmly4e6DzFS6HsgEwSKhUN00edA29Goq1PMFa83GriOTrlp3MlXKeTVYvtKOtwax2_xLZ1G_df_K3DjHwDXXn20U7C-nXlqLe-eOzq8caab60xS9pJCWrufUD4pVEh7aKwXtb-hh7iiKElv4-_WvAOQY5kia4EyvzB2ppTyRssMZUT_5qBe0plao4eB_40WT4bJSfsahzJIMvpHJaTHHSFx78yHecW?type=png)](https://mermaid.live/edit#pako:eNqVVNuO2jAQ_RXLfUlV-AHUlwrUalV1i0CVKjU8DM4kjNaxqTOhbCn_XidmIQGnbPOQy8w5czkz8UEqm6GcSKWhqmYEhYMyNcJfD3Pao55uwIFidPQbnXj_ZzwWnxxkt747pI-k_fd_0xbFekZ5Psh7KKHAeDpsfT7AIHlqtUbF9sSZVrsZMJytcdSHmm3Ieo1rFKScXkpY7sqLaQDz2Zi7mEesnX0dDPQj8i_rnm7QC7u2HIBfdzDVhIa__GQO7p7pjGo-vlOjW6zfexwPt26ByhYmSB5o7Z7F5n0IfiHeaar4x5IdmWIlNKxRV8nbvjfXFnglVCdAQobFfiSax_MJfuzlvN2VV-YcD-aM5rkszDm-z-CwQr7E9BYVcEnmly4e6DzFS6HsgEwSKhUN00edA29Goq1PMFa83GriOTrlp3MlXKeTVYvtKOtwax2_xLZ1G_df_K3DjHwDXXn20U7C-nXlqLe-eOzq8caab60xS9pJCWrufUD4pVEh7aKwXtb-hh7iiKElv4-_WvAOQY5kia4EyvzB2ppTyRssMZUT_5qBe0plao4eB_40WT4bJSfsahzJIMvpHJaTHHSFx78yHecW)
 
 Don't forget the 
 - *Single responsability* : each class of your design must have only one reason to change. Name it with an action verb to make sure of it.
@@ -86,7 +86,7 @@ You can also repeat the steps above in another loop to improve your training, by
 ### 4. 📊 Characterize your data with metrics 
 
 These metrics will be given to your classifier as input, and you know the GIGO saying : *"Garbage In, Garbage Out"* !
-So make sure to use matplotlib to generate report that demonstrates the validity of your metrics by producing `/train/report.png` figures using matplotib, before going any further implementing classification algorithms.
+So make sure to use matplotlib and/or seaborn to generate report that demonstrates the validity of your metrics by producing `/train/report.png` figures using matplotib, before going any further implementing classification algorithms.
 
 ![Matplotib figures](/train/report.png "")
 
