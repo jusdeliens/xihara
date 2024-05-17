@@ -1,7 +1,7 @@
 # Xihara
 A playfull way to teach machine learning by giving the ability to 🤖[Ova bots](https://jusdeliens.com/ova) to recognize colors with their "camereye" 👁️
 
-[![A playfull challenge where students compete with others by developping the best machine learning algorithms](xihara-challenge.png)](http://www.youtube.com/watch?v=3O7sKRbIdt4 "Video Title")
+[![A playfull challenge where students compete with others by developping the best machine learning algorithms](xihara-challenge.png)](http://www.youtube.com/watch?v=3O7sKRbIdt4 "Click to watch students compete with others by developping the best machine learning algorithms")
 
 ## 🎲 Rules
 
