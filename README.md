@@ -1,5 +1,5 @@
 # Xihara
-A playfull way to teach machine learning by giving the ability to Ova bots to recognize colors with their "camereye" 👁️
+A playfull way to teach machine learning by giving the ability to 🤖[Ova bots](https://jusdeliens.com/ova) to recognize colors with their "camereye" 👁️
 
 [![A playfull challenge where students compete with others by developping the best machine learning algorithms](xihara-challenge.png)](http://www.youtube.com/watch?v=3O7sKRbIdt4 "Video Title")
 
@@ -11,7 +11,7 @@ The web application opened in fullscreen, listen to a server that controls the c
 In order to win, each robot must recognize the border color of the circle and change the RGB color of its LED accordingly.
 The app keeps in the inner Xihara circle the possibles color to guess, so the robot can rely on it at any time.  
 
-Here is an example of 4 images captured by one Ova at different time, where the server is set to display 3 colors to guess : 🔴red, 🟢green, 🔵blue.
+Here is an example of 4 images captured by one [Ova](https://jusdeliens.com/ova) at different time, where the server is set to display 3 colors to guess : 🔴red, 🟢green, 🔵blue.
 
 ![Red color to guess among 4 others](/train/4_0_240_240_0.jpeg "🔴Red to guess") ![Green color to guess among 4 others](/train/4_1_240_240_22.jpeg "🟢Green to guess") ![Blue color to guess among 4 others](/train/4_2_240_240_43.jpeg "🔵Blue to guess")
 
@@ -23,7 +23,7 @@ The next level of Xihara challenge, called `SymphonX`, consists of associating c
 Xihara challenges are performed by our students during our IA classrooms and special robotics events.
 
 It requires the following materials :
-- 1 ova bot per student
+- 1 [Ova](https://jusdeliens.com/ova) bot per student
 - 1 computer per student
 - 1 [15 inch tablet](https://support.microsoft.com/fr-fr/surface/surface-book-3-sp%C3%A9cifications-et-fonctionnalit%C3%A9s-261d4bb1-2851-d9d5-2020-283429f6cd8c) or any screen laid horizontally 
 - A webrowser to display the Xihara arena and the colors to guess on the screen
@@ -63,7 +63,7 @@ And export the diagrams (as `.svg` for plantUML, or base64 string for mermaid) a
 Don't forget the 
 - *Single responsability* : each class of your design must have only one reason to change. Name it with an action verb to make sure of it.
 - *Interface segregation* : a user should not depend on things he does NOT need ! If I want to characterize any picture using your classes, it will be great to have the minimal dependencies all behind interfaces, thus, at worse, I will only have to redevelop 1 class that inherits from your interface.
-- *Open to extension, close to modificaiton* : For instance make sure your characterizers can work with any data, coming from an Ova or anything else, to don't have to re-develop all your code each time you want to use with another camera. 
+- *Open to extension, close to modificaiton* : For instance make sure your characterizers can work with any data, coming from an [Ova](https://jusdeliens.com/ova) or anything else, to don't have to re-develop all your code each time you want to use with another camera. 
 
 
 ### 2. 🤖 Connect to your robot 
