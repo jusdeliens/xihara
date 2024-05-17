@@ -70,6 +70,8 @@ Don't forget the
 
 See in the pyrobotx `IRobot` interface and `OvaMqttClient` class how to use the API methods to connect your program to your robot through the mqtt broker and enable its camera to collect some pictures.
 
+[![](https://mermaid.ink/img/pako:eNptkMEKwjAMQH-lxMvE7QeGN73sIMLEWy-xDbO4ttp1A5n7d7fWoQNzCOXlhSTtQVhJkIOosWn2CiuHmhs2RlHai_Vs-8oyduxwVysy_vDwnpsohJZZ6yObYtPeJXpK1l-0suYcoEwKjRUxNeWlEAolCVLdX234nbpYaB4-QAqanEYlx4sC5OCvpIlDPj4luhsHbiYPW29PTyMg966lFOLOnw-IcHgDDQJbHQ?type=png)](https://mermaid.live/edit#pako:eNptkMEKwjAMQH-lxMvE7QeGN73sIMLEWy-xDbO4ttp1A5n7d7fWoQNzCOXlhSTtQVhJkIOosWn2CiuHmhs2RlHai_Vs-8oyduxwVysy_vDwnpsohJZZ6yObYtPeJXpK1l-0suYcoEwKjRUxNeWlEAolCVLdX234nbpYaB4-QAqanEYlx4sC5OCvpIlDPj4luhsHbiYPW29PTyMg966lFOLOnw-IcHgDDQJbHQ)
+
 ### 3. 🚜 Automate the harvest
 
 In order to auto collect and perform the labelling your data to be able to work with any color number (from 2 to 6).
@@ -122,6 +124,9 @@ In your main loop, use your trained model to
 - Play the buzzer tone for each color in loop
 
 And finally ... recognize the melody like a blind test !
+
+[![Click to play on youtube and guess the melody](./xihara-symphonx.png)](https://www.youtube.com/watch?v=JdwyFdozNl0 "Click to play on youtube and guess the melody")
+
 
 ## ⚙️ Setup
 
