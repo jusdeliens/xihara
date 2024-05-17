@@ -3,7 +3,7 @@ A playfull way to teach machine learning by giving the ability to Ova bots to re
 
 [![A playfull challenge where students compete with others by developping the best machine learning algorithms](xihara-challenge.png)](http://www.youtube.com/watch?v=3O7sKRbIdt4 "Video Title")
 
-## 🎯 Claims
+## 🎲 Rules
 
 In this multirobot challenge, each robot is placed above a screen, its camera pointing toward a colored circle.
 The web application opened in fullscreen, listen to a server that controls the colors and make them change more or less randomly (it appears to be random, but you will discover later, it is not 🧐). 
@@ -18,7 +18,7 @@ Here is an example of 4 images captured by one Ova at different time, where the 
 The next level of Xihara challenge, called `SymphonX`, consists of associating colors to musical tones thanks to a dictionary sent by the server, where each color to guess (the key) comes with a frequency (the value) to play using the robot buzzer. Mastering LED RGB and buzzer tone frequency at the same time will give you more points for each color to guess. Finally, when a student manage to guess the melody played by the robots, the host stops the server and ends the game, and the winner will be the one with most points gained 🏆 
 
 
-## 🎮 How to play ?
+## 💻 Materials
 
 Xihara challenges are performed by our students during our IA classrooms and special robotics events.
 
