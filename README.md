@@ -171,6 +171,11 @@ TRAINDTCOLOR=5000
 python main.py
 ```
 
+Note: To update submodules if changed occurs outside this project, use this command
+```
+git submodule update --remote
+```
+
 ## 📂 Folders
 
 The following folders contain the solution of the challenge.
