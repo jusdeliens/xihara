@@ -8,6 +8,8 @@ A playfull way to teach machine learning by giving the ability to 🤖[Ova bots]
 In this multirobot challenge, each robot is placed above a screen, its camera pointing toward a colored circle.
 The web application opened in fullscreen, listen to a server that controls the colors and make them change more or less randomly (it appears to be random, but you will discover later, it is not 🧐). 
 
+### ⭐ Level 1
+
 In order to win, each robot must recognize the border color of the circle and change the RGB color of its LED accordingly.
 The app keeps in the inner Xihara circle the possibles color to guess, so the robot can rely on it at any time.  
 
@@ -15,7 +17,11 @@ Here is an example of 4 images captured by one [Ova](https://jusdeliens.com/ova)
 
 ![Red color to guess among 4 others](/train/4_0_240_240_0.jpeg "🔴Red to guess") ![Green color to guess among 4 others](/train/4_1_240_240_22.jpeg "🟢Green to guess") ![Blue color to guess among 4 others](/train/4_2_240_240_43.jpeg "🔵Blue to guess")
 
-The next level of Xihara challenge, called `SymphonX`, consists of associating colors to musical tones thanks to a dictionary sent by the server, where each color to guess (the key) comes with a frequency (the value) to play using the robot buzzer. Mastering LED RGB and buzzer tone frequency at the same time will give you more points for each color to guess. Finally, when a student manage to guess the melody played by the robots, the host stops the server and ends the game, and the winner will be the one with most points gained 🏆 
+### ⭐⭐ Level 2
+
+The next level of Xihara challenge, called `SymphonX`, consists of associating colors to musical tones thanks to a dictionary sent by the server, where each color to guess (the key) comes with a frequency (the value) to play using the robot buzzer. Mastering LED RGB and buzzer tone frequency at the same time will give you more points for each color to guess. 
+
+Finally, when a student manage to guess the melody played by the robots, the host stops the server and ends the game, and the winner will be the one with most points gained 🏆 
 
 
 ## 💻 Materials
@@ -27,7 +33,7 @@ It requires the following materials :
 - 1 computer per student
 - 1 [15 inch tablet](https://support.microsoft.com/fr-fr/surface/surface-book-3-sp%C3%A9cifications-et-fonctionnalit%C3%A9s-261d4bb1-2851-d9d5-2020-283429f6cd8c) or any screen laid horizontally 
 - A webrowser to display the Xihara arena and the colors to guess on the screen
-- A MQTT broker as a hub. It can be the official online Jusdeliens's broker or your own local broker according to your wishes.
+- A MQTT broker as a hub. It can be the official online Jusdeliens's broker or [your own local broker](https://github.com/jusdeliens/ovahub) according to your wishes.
 - 1 wifi access point available for every robots and computers 
 
 Ideally, it can allow
@@ -48,6 +54,7 @@ Solving this problem will allow you to master
 ## 👣 Steps
 
 In this order, you will have to 
+
 ### 1. 💡 Brainstorm how to make all this work
 
 Think in term of responsabilities (SOLID, mostly S,O,I) or in domain (Domain Driven Design) to foresee the classes and objects of your design, and the todo list corresponding.
@@ -171,10 +178,11 @@ TRAINDTCOLOR=5000
 python main.py
 ```
 
-Note: To update submodules if changed occurs outside this project, use this command
-```
-git submodule update --remote
-```
+> [!NOTE]
+> To update submodules if changed occurs outside this project, use this command
+> ```
+> git submodule update --remote
+> ```
 
 ## 📂 Folders
 
